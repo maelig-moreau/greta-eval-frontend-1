@@ -1,0 +1,182 @@
+/* Basis for styling most elements */
+@font-face {
+    font-family: norwester;
+    src: url(fonts/norwester.otf);
+  }
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 20px;
+}
+
+/* Page structure flow control */
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: grey;
+    background-image: linear-gradient(black,red);
+    background-repeat: no-repeat;
+}
+
+#main_frame {
+    margin: 0px;
+    min-width: 75%;
+    padding: 50px;
+    min-height:200vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+/* catchy image on top of every page */
+#heading_image {
+    border: 1px solid grey;
+    padding: 10vh;
+    background-image: url("images/bedbug-nuke-cover.webp");
+    background-color: red;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+/* styling text elements like titles and bullet lists */
+ul {
+    list-style:"→   ";
+    transform: skewX(30deg);
+    margin-left: 1vw;
+    font-size: 22px;
+}
+
+li {
+    transform: skewX(-30deg);
+}
+
+h1,h2,li {
+    font-family: norwester;
+    top: 0px;
+}
+
+h1 {
+    margin-top: 0px;
+    font-size: 5vh;
+}
+
+/* Forms for sign-in and log-in */
+#forgot_password {
+    background-color: transparent;
+    color: blue;
+    text-transform: capitalize;
+    margin: auto;
+    margin-top: 0;
+}
+
+form {
+    margin: 4vh auto;
+    width: 30vw;
+    border: 2px solid black;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    text-justify: none;
+    border-radius: 5px;
+}
+
+form>div {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#submit {
+    text-align: center;
+    margin: 10%;
+    padding: 10px;
+    transition: all 1s;
+}
+
+#submit:hover {
+    background-color: brown;
+    color: white;
+}
+
+/* navigation bar (navbar) on the side */
+nav {
+    display: flex;
+    background-color: black;
+    padding: 20px;
+    justify-content: flex-end;
+    background-image: linear-gradient(black,grey);
+    z-index: 3;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+nav>a {
+    text-transform: uppercase;
+    margin: 0;
+    background-color: grey;
+    padding:  15px;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+nav>a:hover {
+    color: red;
+    font-size: 115%;
+}
+
+/* From there, desktop mode */
+@media screen and (min-aspect-ratio: 16/15) and (min-width:15cm) {
+    body {
+        padding: 0 16vw;
+    }
+    #heading_image {
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    #main_frame {
+        min-width: 256px;
+        width: 50vw;
+        margin: auto;
+        padding: 4vw;
+        height:200vh;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        float: right;
+        position: fixed;
+        flex-direction: column;
+        left:0;
+        top:0;
+        padding: 2vw 1vw 1vw 1vw;
+        padding-bottom: 40vw;
+        align-items: center;
+        border-bottom-left-radius: 0px;
+    }
+
+    nav>a {
+        margin: 1vw;
+        margin-right: 0;
+        min-width: 1vw;
+        border-bottom: 5px solid whitesmoke;
+        background-color: transparent;
+        border-radius: 20%;
+    }
+    
+    h1 {
+        font-size: 5vw;
+        margin-top: 0px;
+    }
+}
