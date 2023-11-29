@@ -19,14 +19,14 @@ html,body {
 body {
     background-color: grey;
     background-image: linear-gradient(black,red);
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #main_frame {
     margin: 0px;
     min-width: 75%;
     padding: 50px;
-    min-height:200vh;
+    min-height:300vh;
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
@@ -122,6 +122,7 @@ nav {
 }
 
 nav>a {
+    font-size: medium;
     text-transform: uppercase;
     margin: 0;
     background-color: grey;
@@ -180,5 +181,12 @@ nav>a:hover {
     h1 {
         font-size: 5vw;
         margin-top: 0px;
+    }
+}
+
+/* fixing very thin devices making the navbar buttons appear fattened */
+@media screen and (max-width:380px) {
+    nav>a {
+        font-size: small;
     }
 }
