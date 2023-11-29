@@ -11,14 +11,12 @@
 }
 
 /* Page structure flow control */
-html {
+html,body {
     margin: 0px;
     padding: 0px;
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
     background-color: grey;
     background-image: linear-gradient(black,red);
     background-repeat: no-repeat;
@@ -93,6 +91,10 @@ form>div {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+input {
+    max-width: 20vw;
 }
 
 #submit {
