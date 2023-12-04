@@ -25,7 +25,7 @@ body {
 
 #main_frame {
     margin: 0px;
-    min-width: 75%;
+    max-width: 100%;
     padding: 50px;
     min-height:300vh;
     background-color: whitesmoke;
