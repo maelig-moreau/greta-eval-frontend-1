@@ -1,7 +1,7 @@
 /* Basis for styling most elements */
 @font-face {
     font-family: norwester;
-    src: url(fonts/norwester.otf);
+    src: url(./fonts/norwester.otf);
   }
 
 * {
@@ -12,8 +12,9 @@
 
 /* Page structure flow control */
 html,body {
-    margin: 0px;
+    margin: auto;
     padding: 0px;
+    overflow-x: hidden;
 }
 
 body {
@@ -36,7 +37,7 @@ body {
 #heading_image {
     border: 1px solid grey;
     padding: 10vh;
-    background-image: url("images/bedbug-nuke-cover.webp");
+    background-image: url("./images/bedbug-nuke-cover.webp");
     background-color: red;
     background-size: cover;
     background-position: 50% 50%;
